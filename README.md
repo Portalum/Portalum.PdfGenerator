@@ -12,6 +12,8 @@ Portalum.PdfGenerator is also available as a docker image (https://hub.docker.co
 
 from source:
 ```
+git clone https://github.com/Portalum/Portalum.PdfGenerator.git
+cd Portalum.PdfGenerator
 npm install
 npm run run-ts
 ```
