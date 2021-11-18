@@ -8,5 +8,6 @@ EXPOSE 6060/tcp
 ENV PORT 6060
 
 CMD npm install
-CMD npm i ts-node
+CMD npm install -g typescript
+CMD npm install -g ts-node
 CMD npm run run-ts
