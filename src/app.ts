@@ -5,7 +5,7 @@ import swaggerUi from "swagger-ui-express";
 
 export const app = express();
 
-// Use body parser to read sent json payloads
+// Use body parser to read sent json payloads.
 app.use(
   bodyParser.urlencoded({
     extended: true,
@@ -20,4 +20,3 @@ app.use("/swagger", swaggerUi.serve, async (_req: ExRequest, res: ExResponse) =>
   });
 
 RegisterRoutes(app);
-
