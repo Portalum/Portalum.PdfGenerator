@@ -47,3 +47,4 @@ Thumbs.db
 
 # Ignore generated js files
 *.js
+/build
