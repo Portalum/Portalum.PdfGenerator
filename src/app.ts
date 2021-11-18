@@ -20,4 +20,3 @@ app.use("/swagger", swaggerUi.serve, async (_req: ExRequest, res: ExResponse) =>
   });
 
 RegisterRoutes(app);
-
