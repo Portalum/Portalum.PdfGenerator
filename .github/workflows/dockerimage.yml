@@ -17,6 +17,6 @@ jobs:
         DOCKER_TAG_PREFIX: main
       run: |
         docker login docker.pkg.github.com -u Portalum -p ${{ secrets.CONTAINER_REGISTRY_TOKEN }}
-        docker build . --file Dockerfile --tag docker.pkg.github.com/portalum/portalum-pdf-generator:$DOCKER_TAG_PREFIX-$GITHUB_RUN_NUMBER --tag docker.pkg.github.com/portalum/portalum-pdf-generator:latest
-        docker push docker.pkg.github.com/portalum/portalum-pdf-generator:$DOCKER_TAG_PREFIX-$GITHUB_RUN_NUMBER
-        docker push docker.pkg.github.com/portalum/portalum-pdf-generator:latest
+        docker build . --file Dockerfile --tag docker.pkg.github.com/portalum/portalum.pdfgenerator/portalum-pdf-generator:$DOCKER_TAG_PREFIX-$GITHUB_RUN_NUMBER --tag docker.pkg.github.com/portalum/portalum.pdfgenerator/portalum-pdf-generator:latest
+        docker push docker.pkg.github.com/portalum/portalum.pdfgenerator/portalum-pdf-generator:$DOCKER_TAG_PREFIX-$GITHUB_RUN_NUMBER
+        docker push docker.pkg.github.com/portalum/portalum.pdfgenerator/portalum-pdf-generator:latest
