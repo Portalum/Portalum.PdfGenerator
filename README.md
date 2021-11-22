@@ -20,7 +20,7 @@ npm run run-ts
 
 docker: 
 ```
-docker run -d -p 80:80 ladartha/portalum-pdf-generator:latest
+docker run -d -p 80:80 portalum/portalum-pdf-generator:latest
 ```
 
 docker-compose:
@@ -29,7 +29,7 @@ version: '3'
 
 services:
   pdf-generator:
-      image: ladartha/portalum-pdf-generator:latest
+      image: portalum/portalum-pdf-generator:latest
       restart: always
       ports:
         - 80:80
