@@ -3,7 +3,7 @@
 
 Portalum.PdfGenerator is a REST Api to create PDF files. 
 Under the hood it uses pdfmake (https://github.com/bpampuch/pdfmake) to create the PDF files.
-Portalum.PdfGenerator is also available as a docker image (https://hub.docker.com/r/ladartha/portalum-pdf-generator).
+Portalum.PdfGenerator is also available as a docker image (https://hub.docker.com/r/portalum/portalum-pdf-generator).
 
 
 
