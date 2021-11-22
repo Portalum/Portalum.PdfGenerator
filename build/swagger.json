@@ -8,12 +8,12 @@
 		"schemas": {
 			"PdfCreateResponseDto": {
 				"properties": {
-					"pdf": {
+					"pdfBase64": {
 						"type": "string"
 					}
 				},
 				"required": [
-					"pdf"
+					"pdfBase64"
 				],
 				"type": "object",
 				"additionalProperties": false
@@ -46,6 +46,9 @@
 						}
 					}
 				},
+				"tags": [
+					"Pdf"
+				],
 				"security": [],
 				"parameters": [],
 				"requestBody": {

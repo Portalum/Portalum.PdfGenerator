@@ -12,7 +12,7 @@ const models: TsoaRoute.Models = {
     "PdfCreateResponseDto": {
         "dataType": "refObject",
         "properties": {
-            "pdf": {"dataType":"string","required":true},
+            "pdfBase64": {"dataType":"string","required":true},
         },
         "additionalProperties": false,
     },

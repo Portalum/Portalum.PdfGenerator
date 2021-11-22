@@ -1,14 +1,12 @@
-FROM node:16.11.1
+FROM node:16-alpine
 
 WORKDIR /app
 COPY / .
 
-EXPOSE 6060/tcp
+EXPOSE 80/tcp
 
-ENV PORT 6060
+ENV PORT 80
 
-RUN  npm install -g typescript
-RUN  npm install -g ts-node
-RUN  npm install
+RUN  npm install -g typescript && npm install -g ts-node && npm install
 
 CMD npm run run-ts

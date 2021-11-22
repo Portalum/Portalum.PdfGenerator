@@ -18,6 +18,11 @@ npm install
 npm run run-ts
 ```
 
+docker: 
+```
+docker run -d -p 80:80 ladartha/portalum-pdf-generator:latest
+```
+
 docker-compose:
 ```
 version: '3'
@@ -27,7 +32,7 @@ services:
       image: ladartha/portalum-pdf-generator:latest
       restart: always
       ports:
-        - 6060:6060
+        - 80:80
 
 ```
 ## Usage
@@ -36,17 +41,22 @@ Portalum.PdfGenerator exposes a swagger ui:
 
 from source:
 ```
-http://localhost:6060/swagger
+http://localhost/swagger
+```
+
+docker:
+```
+http://server/swagger
 ```
 
 docker-compose:
 ```
-http://server:port/swagger
+http://server/swagger
 ```
 
 generate a simple Pdf:
 ```
-POST http://localhost:6060/pdf
+POST http://localhost/pdf
 
 Body
 {

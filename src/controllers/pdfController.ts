@@ -7,11 +7,13 @@ import {
     Query,
     Route,
     SuccessResponse,
+    Tags,
   } from "tsoa";
 import { PdfCreateResponseDto } from "../models/pdfCreateResponseDto";
 import { PdfService } from "../services/pdfService";
 
 
+  @Tags("Pdf")
   @Route("pdf")
   export class PdfController extends Controller {
 
@@ -20,7 +22,7 @@ import { PdfService } from "../services/pdfService";
     {
         const pdfService = new PdfService();
         const result = await pdfService.createPdf(request);
-        return { pdf: result };
+        return { pdfBase64: result };
     }
 
   }

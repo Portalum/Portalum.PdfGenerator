@@ -1,9 +1,12 @@
-import express, { Response as ExResponse, Request as ExRequest } from "express";
+import express, { Response as ExResponse, Request as ExRequest, NextFunction } from "express";
 import bodyParser from "body-parser";
 import { RegisterRoutes } from "../build/routes";
 import swaggerUi from "swagger-ui-express";
+import { ValidateError } from "tsoa";
 
 export const app = express();
+
+
 
 // Use body parser to read sent json payloads.
 app.use(
@@ -19,4 +22,7 @@ app.use("/swagger", swaggerUi.serve, async (_req: ExRequest, res: ExResponse) =>
     );
   });
 
+
+
 RegisterRoutes(app);
+

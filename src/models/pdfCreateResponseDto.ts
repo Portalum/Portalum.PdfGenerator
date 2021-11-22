@@ -1,3 +1,3 @@
 export interface PdfCreateResponseDto {
-    pdf: string;
+    pdfBase64: string;
 }
