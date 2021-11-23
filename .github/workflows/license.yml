@@ -2,7 +2,8 @@ name: Generate Licence
 
 on:
   push:
-    branches: [ main ]
+    paths:
+        - 'src/package.json'
 
 jobs:
   build:
