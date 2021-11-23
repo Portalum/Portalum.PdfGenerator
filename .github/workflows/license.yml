@@ -3,7 +3,7 @@ name: Generate Licence
 on:
   push:
     paths:
-        - 'src/package.json'
+        - 'package.json'
 
 jobs:
   build:
