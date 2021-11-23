@@ -11,11 +11,9 @@ WORKDIR /usr/app
 COPY --from=ts-compiler /usr/app/package*.json ./
 COPY --from=ts-compiler /usr/app/build ./
 RUN npm install --only=production
-RUN ls
 
 FROM gcr.io/distroless/nodejs:14
 WORKDIR /usr/app
 COPY --from=ts-remover /usr/app ./
 USER 1000
-RUN ls
-CMD ["server.js"]
+CMD ["src/server.js"]
