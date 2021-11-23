@@ -1,6 +1,6 @@
 import express, { Response as ExResponse, Request as ExRequest, NextFunction } from "express";
 import bodyParser from "body-parser";
-import { RegisterRoutes } from "../build/routes";
+import { RegisterRoutes } from "../tsoa/routes";
 import swaggerUi from "swagger-ui-express";
 import { ValidateError } from "tsoa";
 
@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 
 app.use("/swagger", swaggerUi.serve, async (_req: ExRequest, res: ExResponse) => {
     return res.send(
-      swaggerUi.generateHTML(await import("../build/swagger.json"))
+      swaggerUi.generateHTML(await import("../tsoa/swagger.json"))
     );
   });
 

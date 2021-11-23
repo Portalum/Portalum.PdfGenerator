@@ -1,12 +1,19 @@
-FROM node:16-alpine
+FROM node:14-alpine3.10 as ts-compiler
+WORKDIR /usr/app
+COPY package*.json ./
+COPY tsconfig*.json ./
+RUN npm install
+COPY . ./
+RUN npm run build
 
-WORKDIR /app
-COPY / .
+FROM node:14-alpine3.10 as ts-remover
+WORKDIR /usr/app
+COPY --from=ts-compiler /usr/app/package*.json ./
+COPY --from=ts-compiler /usr/app/build ./
+RUN npm install --only=production
 
-EXPOSE 80/tcp
-
-ENV PORT 80
-
-RUN  npm install -g typescript && npm install -g ts-node && npm install
-
-CMD npm run run-ts
+FROM gcr.io/distroless/nodejs:14
+WORKDIR /usr/app
+COPY --from=ts-remover /usr/app ./
+USER 1000
+CMD ["server.js"]
