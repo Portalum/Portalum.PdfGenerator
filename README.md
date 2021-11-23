@@ -74,4 +74,4 @@ To convert the examples in JSON object you can use: https://www.convertsimple.co
 
 Portalum.PdfGenerator is licensed under the MIT license. [MIT](https://choosealicense.com/licenses/mit/)
 
-For all licences see licences.txt
+For all licences see LICENSE-thirdparty
