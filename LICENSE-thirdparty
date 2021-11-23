@@ -1942,6 +1942,12 @@
 │  ├─ url: sindresorhus.com
 │  ├─ path: /Users/runner/work/Portalum.PdfGenerator/Portalum.PdfGenerator/node_modules/prepend-http
 │  └─ licenseFile: /Users/runner/work/Portalum.PdfGenerator/Portalum.PdfGenerator/node_modules/prepend-http/license
+├─ prettier@2.4.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/prettier/prettier
+│  ├─ publisher: James Long
+│  ├─ path: /Users/runner/work/Portalum.PdfGenerator/Portalum.PdfGenerator/node_modules/prettier
+│  └─ licenseFile: /Users/runner/work/Portalum.PdfGenerator/Portalum.PdfGenerator/node_modules/prettier/LICENSE
 ├─ process-nextick-args@2.0.1
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/calvinmetcalf/process-nextick-args
