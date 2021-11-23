@@ -5,12 +5,16 @@ COPY tsconfig*.json ./
 RUN npm install
 COPY . ./
 RUN npm run build
+RUN ls
 
 FROM node:14-alpine3.10 as ts-remover
 WORKDIR /usr/app
+RUN ls
 COPY --from=ts-compiler /usr/app/package*.json ./
 COPY --from=ts-compiler /usr/app/build ./
 COPY --from=ts-compiler /usr/app/fonts ./
+COPY --from=ts-compiler /usr/app/fonts ./src
+RUN ls
 RUN npm install --only=production
 
 FROM gcr.io/distroless/nodejs:14
