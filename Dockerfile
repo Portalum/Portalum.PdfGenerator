@@ -16,4 +16,4 @@ FROM gcr.io/distroless/nodejs:14
 WORKDIR /usr/app
 COPY --from=ts-remover /usr/app ./
 USER 1000
-CMD ["server.js"]
+//CMD ["server.js"]
