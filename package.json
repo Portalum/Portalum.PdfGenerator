@@ -6,6 +6,7 @@
     "dev": "concurrently \"nodemon\" \"nodemon -x tsoa spec-and-routes\"",
     "build": "tsoa spec-and-routes && tsc",
     "start": "node build/src/server.js",
+    "spec": "tsoa spec-and-routes",
     "run-ts": "tsoa spec-and-routes && ts-node src/server.ts"
   },
   "license": "MIT",
