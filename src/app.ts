@@ -11,10 +11,10 @@ export const app = express();
 // Use body parser to read sent json payloads.
 app.use(
   bodyParser.urlencoded({
-    extended: true,
+    limit: '50mb', extended: true,
   })
 );
-app.use(bodyParser.json());
+app.use(bodyParser.json({limit: '50mb'}));
 
 app.use("/swagger", swaggerUi.serve, async (_req: ExRequest, res: ExResponse) => {
     return res.send(
